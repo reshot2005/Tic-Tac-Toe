@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyberpunk Tic-Tac-Toe vs Bot</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div class="game-container">
+    <h1 class="game-title">🤖 Bot Battle</h1>
+    <div class="scoreboard">
+      <span>👤 You: <span id="player-score">0</span></span>
+      <span>🤖 Bot: <span id="bot-score">0</span></span>
+    </div>
+    <div class="board" id="board">
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </div>
+    <p class="player-turn" id="status">Your turn!</p>
+    <button class="reset-btn" onclick="resetGame()">🔄 New Round</button>
+    <a href="/index.html" class="reset-btn"> 🔙🔙 Back to Menu </a>
+  </div>
+
+  <audio id="win-sound" src="/SFX/win.mp3"></audio>
+  <script src="/js/bot.js"></script>
+</body>
+</html>

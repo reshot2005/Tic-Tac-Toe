@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+
+body {
+  margin: 0;
+  background: #0f0c29;
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #0ff;
+  overflow: hidden;
+}
+
+.game-container {
+  text-align: center;
+}
+
+.game-title {
+  font-size: 2.5rem;
+  color: #f0f;
+  text-shadow: 0 0 10px #f0f, 0 0 20px #0ff;
+  margin-bottom: 20px;
+}
+
+.player-turn {
+  margin: 10px 0;
+  font-size: 1.3rem;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { text-shadow: 0 0 5px #0ff; }
+  50% { text-shadow: 0 0 15px #0ff, 0 0 25px #0ff; }
+  100% { text-shadow: 0 0 5px #0ff; }
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  font-size: 2.5rem;
+  background-color: #111;
+  border: 2px solid #0ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+  box-shadow: 0 0 5px #0ff;
+}
+
+.cell:hover {
+  transform: scale(1.05);
+  background: #222;
+}
+
+.cell.win {
+  background: linear-gradient(45deg, #0ff, #f0f);
+  animation: winPulse 0.5s infinite alternate;
+}
+
+@keyframes winPulse {
+  from { transform: scale(1); box-shadow: 0 0 15px #f0f; }
+  to { transform: scale(1.1); box-shadow: 0 0 30px #0ff; }
+}
+
+.result {
+  font-size: 1.5rem;
+  margin: 10px;
+  color: #fff;
+}
+
+.reset-btn {
+  background-color: #0ff;
+  color: #111;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  box-shadow: 0 0 10px #0ff;
+}
+
+.reset-btn:hover {
+  background-color: #f0f;
+  color: #fff;
+  box-shadow: 0 0 20px #f0f;
+}
+
+.mode-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .mode-btn {
+    background: transparent;
+    border: 2px solid #0ff;
+    color: #0ff;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 15px;
+    text-shadow: 0 0 10px #0ff;
+    transition: all 0.3s;
+    box-shadow: 0 0 15px #0ff;
+  }
+  
+  .mode-btn:hover {
+    background-color: #0ff;
+    color: #111;
+    box-shadow: 0 0 25px #f0f, 0 0 40px #0ff;
+  }
+  .mode-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .mode-btn {
+    background: transparent;
+    border: 2px solid #0ff;
+    color: #0ff;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 15px;
+    text-shadow: 0 0 10px #0ff;
+    transition: all 0.3s;
+    box-shadow: 0 0 15px #0ff;
+  }
+  
+  .mode-btn:hover {
+    background-color: #0ff;
+    color: #111;
+    box-shadow: 0 0 25px #f0f, 0 0 40px #0ff;
+  }
+
+  .scoreboard {
+    display: flex;
+    justify-content: space-around;
+    color: #0ff;
+    font-size: 1.1rem;
+    text-shadow: 0 0 5px #0ff;
+    margin: 10px 0 20px;
+  }
+  
+    
